@@ -4,6 +4,8 @@ import xmltodict
 import telepot
 from telepot.loop import MessageLoop
 
+
+#현재 시간
 def get_current_date_string():
     current_date = datetime.now().date()
     return current_date.strftime("%Y%m%d")
@@ -62,6 +64,7 @@ def forecast(nx, ny):
 
     return weather_data
 
+#지역 설정
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
     if content_type == 'text':
